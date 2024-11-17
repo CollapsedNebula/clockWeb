@@ -5,6 +5,10 @@
     font-style: normal;
 }
 
+#body {
+    transition: background-color 0.5s ease;
+}
+
 #lore {
     font-family: 'STUNNING-Bd';
     letter-spacing: 10px;
@@ -13,6 +17,7 @@
     top: 40%;
     left: 50%;
     font-size: 20px;
+    transition: color 0.5s ease;
 }
 
 #clock {
@@ -25,8 +30,8 @@
     left: 50%;
     color: transparent;
     background: linear-gradient(45deg, #3c98da, #a83dff);
-    -webkit-background-clip: text;
     background-clip: text;
+    transition: background 1s ease;
 }
 
 #date {
@@ -41,80 +46,77 @@
 }
 
 #secondChart {
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     border-radius: 50%;
     position: fixed;
     border: 12px solid #ccc;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: border-color 0.5s ease;
 }
 
 #secondSlice {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
-    clip-path: polygon(50% 50%, 50% 0, 55% 0);
+    clip-path: polygon(50% 50%, 50% 0, 51% 0);
     background-color: transparent;
-    border: 12px solid #387ccd;
+    border: 200px solid #387ccd;
     transform-origin: center;
     transform: rotate(0deg);
-    top: -12px;
-    left: -12px;
     transition: transform 0.5s ease;
 }
 
 #minuteChart {
-    width: 577px;
-    height: 577px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%;
     position: fixed;
     border: 12px solid #ccc;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: border-color 0.5s ease;
 }
 
 #minuteSlice {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
-    clip-path: polygon(50% 50%, 50% 0, 55% 0);
+    clip-path: polygon(50% 50%, 50% 0, 53% 0);
     background-color: transparent;
-    border: 12px solid #2463a6;
+    border: 175px solid #2463a6;
     transform-origin: center;
     transform: rotate(0deg);
-    top: -12px;
-    left: -12px;
     transition: transform 0.5s ease;
 }
 
 #hourChart {
-    width: 554px;
-    height: 554px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     position: fixed;
-    border: 12px solid #ccc;
+    border: 110px solid #ccc;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: border-color 0.5s ease;
 }
 
 #hourSlice {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
-    clip-path: polygon(50% 50%, 50% 0, 65% 0);
+    clip-path: polygon(50% 50%, 50% 0, 55% 0);
     background-color: transparent;
-    border: 12px solid #174c8e;
+    border: 150px solid #174c8e;
     transform-origin: center;
     transform: rotate(0deg);
-    top: -12px;
-    left: -12px;
     transition: transform 0.5s ease;
 }
 
@@ -127,6 +129,7 @@
     border-radius: 50px;
     position: fixed;
     transform: translate(-50%, -50%);
+    transition: background-color 0.5s ease;
     border: none;
 }
 
@@ -139,10 +142,22 @@
     transform: translate(-110%, -50%);
     top: 50%;
     left: 50%;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 #sun {
     width: 100%;
     height: 100%;
+    left: 0%;
+    position: absolute;
     filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(141deg) brightness(85%) contrast(88%);
+}
+
+#moon {
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    position: absolute;
+    opacity: 0;
+    filter: invert(100%) sepia(2%) saturate(463%) hue-rotate(216deg) brightness(115%) contrast(87%);
 }
